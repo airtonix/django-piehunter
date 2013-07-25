@@ -43,6 +43,7 @@ Throw your Tastypie resources into the api module to end up with something like 
     templates/
     static/
     api/
+        __init__.py
         resources.py
         ...
     ...

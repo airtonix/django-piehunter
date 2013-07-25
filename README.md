@@ -49,9 +49,20 @@ Throw your Tastypie resources into the api module to end up with something like 
     ...
 ```
 
-At the end of your `api.resources` module, include a list/set of resources you want to use :
+At the end of your `api.resources` module, include a list/set of resources you want piehunter to find :
 
 ```
+from tastypie.resources import ModelResource
+
+class TrooperResource(ModelResource):
+   ...
+
+class DeathstarResource(ModelResource):
+   ...
+
+class EvilGrinResource(ModelResource):
+   ...
+
 EnabledResources = (TrooperResource,
                     DeathstarResource,
                     EvilGrinResource,

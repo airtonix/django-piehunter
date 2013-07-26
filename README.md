@@ -1,7 +1,10 @@
 django-piehunter
 ================
 
-Automatic Tastypie URL builder by way of import discovery.
+Automatic Tastypie URL builder by way of import discovery through all your `INSTALLED_APPS`.
+
+Nothing complex, just a piece of functionality I found I was repeating over and over in the 
+projects I've been deploying recently.
 
 
 
@@ -69,4 +72,6 @@ EnabledResources = (TrooperResource,
                     )
 ```
 
-That's it, piehunter will now hunt for and include any resource found to be in a api.resources.EnabledResources
+That's it, piehunter will now hunt through all the applications in your `INSTALLED_APPS` 
+and include any resource found to be in an applications `api.resources.EnabledResources`.
+ 

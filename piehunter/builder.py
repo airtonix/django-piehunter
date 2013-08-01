@@ -5,6 +5,7 @@ from .discovery import autodiscover
 
 class PieHunter(object):
     urlpatterns = None
+    _registry = {}
 
     def __init__(self, api_name='v1', dotted_path='api.resources', enabled_attribute='EnabledResources'):
         cage = Api(api_name)
